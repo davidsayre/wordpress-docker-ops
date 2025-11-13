@@ -1,0 +1,12 @@
+.idea/*
+*.*~
+*.bak
+*/*.sh.dev
+*.dev
+
+dev/mysql/db/*
+*.sql
+www/wp-content/RMI_BACKUPS
+
+
+
