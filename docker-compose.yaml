@@ -23,6 +23,7 @@ services:
       context: dev/app
       dockerfile: Dockerfile
     volumes:
+      - './dev/app/php.ini:/usr/local/etc/php/php.ini:ro'
       - ./www:/var/www/html
     ports:
       - '${PROJECTPORTPREFIX}00:80'
