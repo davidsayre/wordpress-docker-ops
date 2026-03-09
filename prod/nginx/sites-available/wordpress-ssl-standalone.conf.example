@@ -12,12 +12,12 @@ server {
     # be sure to EDIT ssl/ssl.inc with ssl keys
     include ssl/ssl.inc;
 
-    access_log  /var/log/nginx/wordpress-ssl-access.log  main;
+    access_log  /var/log/nginx/wordpress-ssl-access.log;
     error_log  /var/log/nginx/wordpress-ssl-error.log;
 
     #include conf.d/vhost_share.inc;
 
-    root /var/www/wordpress/www;
+    root /var/www/wordpress;
 
     # detect /index.php to prevent include loops
     rewrite ^/index.php$ /404 last;

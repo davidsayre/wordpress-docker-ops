@@ -8,12 +8,12 @@ server {
 
     server_name _;
 
-    access_log  /var/log/nginx/wordpress-80-access.log  main;
+    access_log  /var/log/nginx/wordpress-80-access.log;
     error_log  /var/log/nginx/wordpress-80-error.log;
 
     #include conf.d/vhost_share.inc;
 
-    root /var/www/wordpress/www;
+    root /var/www/wordpress;
 
     index index.php;
 
