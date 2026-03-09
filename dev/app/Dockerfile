@@ -1,6 +1,6 @@
 FROM wordpress:latest
 
-RUN apt update && apt install -y less
+RUN apt update && apt install -y less git nano htop
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
       && chmod +x wp-cli.phar \
       && cp wp-cli.phar /usr/local/bin/wp
@@ -11,3 +11,5 @@ RUN usermod --shell /bin/bash www-data  && \
   usermod --uid 1000 www-data && \
   groupmod -g 1000 www-data && \
   chown www-data:www-data -Rf /var/www
+
+USER www-data
